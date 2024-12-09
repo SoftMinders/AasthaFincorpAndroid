@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/task_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Task Name: "
+        android:textSize="13dp"
+        android:fontFamily="@font/poppins_bold"
+        android:drawableLeft="@drawable/email24"
+        android:drawablePadding="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/task_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date &amp; Time: "
+        android:textSize="13dp"
+        android:fontFamily="@font/poppins_regular"
+        android:drawableLeft="@drawable/meeting_calendar"
+        android:drawablePadding="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/task_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status: "
+        android:textSize="13dp"
+        android:fontFamily="@font/poppins_regular"
+        android:drawableLeft="@drawable/search2"
+        android:drawablePadding="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000"/>
+    <TextView
+        android:id="@+id/task_remarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remarks: "
+        android:textSize="13dp"
+        android:fontFamily="@font/poppins_regular"
+        android:drawableLeft="@drawable/remarks"
+        android:drawablePadding="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddContant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:fontFamily="@font/poppins_regular"
+        android:drawableLeft="@drawable/editing"
+        android:drawablePadding="10dp"
+        android:drawableTint="#FFF"
+        android:background="@drawable/rounden_button"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:textAllCaps="false"
+        android:text="Edit Task"/>
+</LinearLayout>

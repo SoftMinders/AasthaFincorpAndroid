@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+<item
+    android:id="@+id/nav_home"
+    android:icon="@drawable/dashboard"
+    android:title="Dashboard" />
+<item
+    android:id="@+id/nav_meeting_calendar"
+    android:icon="@drawable/meeting_calendar"
+    android:title="Meeting Calendar" />
+<item
+    android:id="@+id/nav_todo"
+    android:icon="@drawable/todo"
+    android:title="Todo" />
+<item
+    android:id="@+id/nav_create_task"
+    android:title="Create Task"
+    android:icon="@drawable/task" />
+<item
+    android:id="@+id/nav_view_task"
+    android:title="View Task"
+    android:icon="@drawable/task"/>
+<item
+    android:id="@+id/nav_create_meeting"
+    android:title="Create Meeting"
+    app:itemIconTint="@null"
+    android:icon="@drawable/meeting" />
+<item
+    android:id="@+id/nav_view_meeting"
+    android:title="View Meetings"
+    android:icon="@drawable/meeting"/>
+<item
+    android:id="@+id/nav_create_casual_meeting"
+    android:title="Create Casual Meeting"
+    android:icon="@drawable/casual_meeting" />
+<item
+    android:id="@+id/nav_view_casual_meeting"
+    android:title="View Casual Meetings"
+    android:icon="@drawable/casual_meeting"/>
+<item
+    android:id="@+id/nav_view_leads"
+    android:title="View Leads"
+    android:icon="@drawable/leads2"/>
+<item
+    android:id="@+id/nav_view_accounts"
+    android:title="View Accounts"
+    android:icon="@drawable/accounting"/>
+<item
+    android:id="@+id/nav_create_sales"
+    android:title="Create Sales"
+    android:icon="@drawable/business_achievements"/>
+<item
+    android:id="@+id/nav_viewsales"
+    android:title="View Sales"
+    android:icon="@drawable/business_achievements"/>
+</menu>

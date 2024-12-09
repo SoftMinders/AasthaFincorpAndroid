@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "841790925169",
+    "project_id": "aastha-fintech-memo",
+    "storage_bucket": "aastha-fintech-memo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841790925169:android:26e7ecd48853664e4e6ed0",
+        "android_client_info": {
+          "package_name": "com.af.aasthafincorp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ-w-fZOhBov1ZHtryoX9A6BcsEMpazW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

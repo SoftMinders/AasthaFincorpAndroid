@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.af.aasthafincorp.ui.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_view_task"
+        android:name="com.af.aasthafincorp.ui.Task.TasksFragment"
+        android:label="View Tasks"
+        tools:layout="@layout/fragment_task_view" />
+    <fragment
+        android:id="@+id/nav_todo"
+        android:name="com.af.aasthafincorp.ui.Todo.TodoFragment"
+        android:label="Todo"
+        tools:layout="@layout/fragment_todo" />
+    <fragment
+        android:id="@+id/nav_view_meeting"
+        android:name="com.af.aasthafincorp.ui.Meetings.ViewMeetingsFragment"
+        android:label="View Meetings"
+        tools:layout="@layout/fragment_meetings_view" />
+    <fragment
+        android:id="@+id/nav_view_casual_meeting"
+        android:name="com.af.aasthafincorp.ui.CasualMeetings.ViewCasualMeetingsFragment"
+        android:label="View Casual Meetings"
+        tools:layout="@layout/fragment_casual_meetings_view" />
+    <fragment
+        android:id="@+id/nav_view_leads"
+        android:name="com.af.aasthafincorp.ui.Leads.ViewLeadsFragment"
+        android:label="View All Leads"
+        tools:layout="@layout/fragment_leads_view" />
+    <fragment
+        android:id="@+id/nav_view_accounts"
+        android:name="com.af.aasthafincorp.ui.Accounts.ViewAccountsFragment"
+        android:label="View All Accounts"
+        tools:layout="@layout/fragment_accounts_view" />
+</navigation>
