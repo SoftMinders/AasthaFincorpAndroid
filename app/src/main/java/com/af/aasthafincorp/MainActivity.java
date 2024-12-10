@@ -22,9 +22,15 @@ import android.widget.Toast;
 import com.af.aasthafincorp.databinding.ActivityMainBinding;
 import com.af.aasthafincorp.ui.Accounts.ViewAccountsFragment;
 import com.af.aasthafincorp.ui.CasualMeetings.ViewCasualMeetingsFragment;
+import com.af.aasthafincorp.ui.Contacts.CompleteContactFragment;
+import com.af.aasthafincorp.ui.Contacts.NotReceivingContactFragment;
+import com.af.aasthafincorp.ui.Contacts.NotRespondingContactFragment;
+import com.af.aasthafincorp.ui.Contacts.PendingContactFragment;
+import com.af.aasthafincorp.ui.Contacts.SwitchOffContactFragment;
 import com.af.aasthafincorp.ui.DashboardFragment;
 import com.af.aasthafincorp.ui.Leads.ViewLeadsFragment;
 import com.af.aasthafincorp.ui.Meetings.ViewMeetingsFragment;
+import com.af.aasthafincorp.ui.Reference.ViewReferencesFragment;
 import com.af.aasthafincorp.ui.Task.TasksFragment;
 import com.af.aasthafincorp.ui.Todo.TodoFragment;
 import com.af.aasthafincorp.ui.sales.ViewSalesFragment;
@@ -107,7 +113,7 @@ public class MainActivity extends AppCompatActivity{
         contacts.add("Not Responding");
         contacts.add("Complete");
         contacts.add("Switch Off");
-        contacts.add("Not Responding");
+        contacts.add("Not Receiving");
         childList.put("Contacts", contacts);
         // Reference Dropdown
         parentList.add("Reference");
@@ -189,10 +195,31 @@ public class MainActivity extends AppCompatActivity{
                     }
                 }
                 if (groupPosition == 9) {  // Contacts
-
+                    if (childPosition == 0) {
+                        openFragment(new PendingContactFragment(),"View Pending Contacts");
+                        drawer.closeDrawer(GravityCompat.START);
+                    } else if (childPosition == 1) {
+                        openFragment(new NotRespondingContactFragment(),"View Not Responding Contacts");
+                        drawer.closeDrawer(GravityCompat.START);
+                    } else if (childPosition == 2) {
+                        openFragment(new CompleteContactFragment(),"View Complete Contacts");
+                        drawer.closeDrawer(GravityCompat.START);
+                    } else if (childPosition == 3) {
+                        openFragment(new SwitchOffContactFragment(),"View Switch Off Contacts");
+                        drawer.closeDrawer(GravityCompat.START);
+                    } else if (childPosition == 4) {
+                        openFragment(new NotReceivingContactFragment(),"View Not Receiving Contacts");
+                        drawer.closeDrawer(GravityCompat.START);
+                    }
                 }
                 if (groupPosition == 10) {  // References
-
+                    if (childPosition == 0) {
+                        openFragment(new ViewReferencesFragment(),"View All References");
+                        drawer.closeDrawer(GravityCompat.START);
+                    } else if (childPosition == 1) {
+                        openFragment(new ViewReferencesFragment(),"View All References");
+                        drawer.closeDrawer(GravityCompat.START);
+                    }
                 }
                 if (groupPosition == 11) {  // Leaves
 

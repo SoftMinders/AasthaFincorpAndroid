@@ -40,4 +40,34 @@
         android:name="com.af.aasthafincorp.ui.Accounts.ViewAccountsFragment"
         android:label="View All Accounts"
         tools:layout="@layout/fragment_accounts_view" />
+    <fragment
+        android:id="@+id/nav_pending_contacts"
+        android:name="com.af.aasthafincorp.ui.Contacts.PendingContactFragment"
+        android:label="View Pending Contacts"
+        tools:layout="@layout/fragment_contact_pending" />
+    <fragment
+        android:id="@+id/nav_complete_contacts"
+        android:name="com.af.aasthafincorp.ui.Contacts.CompleteContactFragment"
+        android:label="View Complete Contacts"
+        tools:layout="@layout/fragment_contact_complete" />
+    <fragment
+        android:id="@+id/nav_not_receiving_contacts"
+        android:name="com.af.aasthafincorp.ui.Contacts.NotReceivingContactFragment"
+        android:label="View Not Receiving Contacts"
+        tools:layout="@layout/fragment_contact_notreceiving" />
+    <fragment
+        android:id="@+id/nav_not_responding_contacts"
+        android:name="com.af.aasthafincorp.ui.Contacts.NotRespondingContactFragment"
+        android:label="View Not Responding Contacts"
+        tools:layout="@layout/fragment_contact_notresponding" />
+    <fragment
+        android:id="@+id/nav_switch_off_contacts"
+        android:name="com.af.aasthafincorp.ui.Contacts.SwitchOffContactFragment"
+        android:label="View Switch Off Contacts"
+        tools:layout="@layout/fragment_contact_switchoff" />
+    <fragment
+        android:id="@+id/nav_all_references"
+        android:name="com.af.aasthafincorp.ui.Reference.ViewReferencesFragment"
+        android:label="View All References"
+        tools:layout="@layout/fragment_references_view" />
 </navigation>

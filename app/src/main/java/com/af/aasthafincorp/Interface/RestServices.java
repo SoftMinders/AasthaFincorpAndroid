@@ -80,6 +80,23 @@ public interface RestServices {
     @POST("get-all-sales")
     Call<JsonObject> getAllSales(@Header("token") String Token,
                                  @Part("user_id") RequestBody user_id);
+    //2. Add device Id
+    @Multipart
+    @POST("get-all-sheets")
+    Call<JsonObject> getAllSheets(@Header("token") String Token,
+                                 @Part("user_id") RequestBody user_id);
+    //2. Add device Id
+    @Multipart
+    @POST("get-all-reference")
+    Call<JsonObject> getAllReference(@Header("token") String Token,
+                                 @Part("user_id") RequestBody user_id);
+    //2. Add device Id
+    @Multipart
+    @POST("get-contact-by-type")
+    Call<JsonObject> getContactByType(@Header("token") String Token,
+                                      @Part("sheet_id") RequestBody sheet_id,
+                                      @Part("type") RequestBody type,
+                                      @Part("user_id") RequestBody user_id);
 
 
     @Multipart
