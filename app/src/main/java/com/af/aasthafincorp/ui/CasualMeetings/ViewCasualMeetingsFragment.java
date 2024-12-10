@@ -186,12 +186,12 @@ public class ViewCasualMeetingsFragment extends Fragment {
                 TextView meeting_mobile = dialog.findViewById(R.id.meeting_mobile);
 
 
-                meeting_name.setText(name[1]);
-                meeting_date.setText(date[1]);
+                meeting_name.setText(name[1].length() > 1 ? name[1] : "");
+                meeting_date.setText(date[1].length() > 1 ? date[1] : "");
                 meeting_status.setText(status[1].replace("}",""));
-                meeting_product.setText(product[1]);
-                meeting_mobile.setText(mobile[1]);
-                meeting_desc.setText(description[1]);
+                meeting_product.setText(product[1].length() > 1 ? product[1] : "");
+                meeting_mobile.setText(mobile[1].length() > 1 ? mobile[1] : "");
+                meeting_desc.setText(description[1].length() > 1 ? description[1] : "");
 
 
                 startTime = dialog.findViewById(R.id.start_time);
@@ -199,39 +199,45 @@ public class ViewCasualMeetingsFragment extends Fragment {
                 seekBar = dialog.findViewById(R.id.progress_bar);
                 playPauseButton = dialog.findViewById(R.id.play_pause_button);
 
-                // Initialize MediaPlayer with an external URL
-                mediaPlayer = MediaPlayer.create(getContext(), Uri.parse(audio[1]));
-                mediaPlayer.setOnPreparedListener(mp -> {
-                    // Set End Time
-                    endTime.setText(formatTime(mp.getDuration()));
-                    seekBar.setMax(mp.getDuration());
-                });
+                if(audio[1].length() > 1) {
+                    // Initialize MediaPlayer with an external URL
+                    mediaPlayer = MediaPlayer.create(getContext(), Uri.parse(audio[1]));
+                    mediaPlayer.setOnPreparedListener(mp -> {
+                        // Set End Time
+                        endTime.setText(formatTime(mp.getDuration()));
+                        seekBar.setMax(mp.getDuration());
+                    });
 
-                // Play/Pause Button
-                playPauseButton.setOnClickListener(v -> {
-                    if (mediaPlayer.isPlaying()) {
-                        mediaPlayer.pause();
-                        playPauseButton.setImageResource(R.drawable.play);
-                    } else {
-                        mediaPlayer.start();
-                        playPauseButton.setImageResource(R.drawable.pause);
-                        updateSeekBar();
-                    }
-                });
-                // SeekBar Listener
-                seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                    @Override
-                    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                        if (fromUser) mediaPlayer.seekTo(progress);
-                        startTime.setText(formatTime(mediaPlayer.getCurrentPosition()));
-                    }
+                    // Play/Pause Button
+                    playPauseButton.setOnClickListener(v -> {
+                        if (mediaPlayer.isPlaying()) {
+                            mediaPlayer.pause();
+                            playPauseButton.setImageResource(R.drawable.play);
+                        } else {
+                            mediaPlayer.start();
+                            playPauseButton.setImageResource(R.drawable.pause);
+                            updateSeekBar();
+                        }
+                    });
+                    // SeekBar Listener
+                    seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                        @Override
+                        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                            if (fromUser) mediaPlayer.seekTo(progress);
+                            startTime.setText(formatTime(mediaPlayer.getCurrentPosition()));
+                        }
 
-                    @Override
-                    public void onStartTrackingTouch(SeekBar seekBar) {}
+                        @Override
+                        public void onStartTrackingTouch(SeekBar seekBar) {
+                        }
 
-                    @Override
-                    public void onStopTrackingTouch(SeekBar seekBar) {}
-                });
+                        @Override
+                        public void onStopTrackingTouch(SeekBar seekBar) {
+                        }
+                    });
+                }else{
+                    //No Audio Found
+                }
 
                 dialog.show();
             }

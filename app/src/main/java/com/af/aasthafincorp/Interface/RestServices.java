@@ -75,6 +75,11 @@ public interface RestServices {
     @POST("get-all-accounts")
     Call<JsonObject> getAllAccounts(@Header("token") String Token,
                                  @Part("user_id") RequestBody user_id);
+    //2. Add device Id
+    @Multipart
+    @POST("get-all-sales")
+    Call<JsonObject> getAllSales(@Header("token") String Token,
+                                 @Part("user_id") RequestBody user_id);
 
 
     @Multipart
